@@ -1,0 +1,64 @@
+---
+title: "Honey Heat Maps"
+output: 
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { title: "return to site", href: "https://k-maciejewski.github.io/", align: right }
+    source_code: "https://github.com/k-maciejewski/"
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(readr)
+honeyproduction <- read_csv("honeyproduction.csv")
+library(usmap)
+library(dplyr)
+library(shiny)
+library(ggplot2)
+library(plotly)
+# honeyproduction_long <- honeyproduction %>% gather(honey)
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+```{r widget}
+
+# choose year
+# choose data of interest: numcol, yieldpercol, totalprod, stocks, priceperlb, prodvalue
+
+hr()
+
+## sentiments
+data = honeyproduction %>% select(-c(state,year)) %>% colnames()
+
+selectInput("data_choice", label = h3("Select Data of Interest"),
+            choices = data, selected = "numcol")
+
+hr()
+
+## hours
+years = honeyproduction %>% arrange(year) %>% distinct(year) %>% pull()
+
+selectInput("year_choice", label = h3("Choose Year"),
+            choices = years, selected = "1998")
+
+```
+
+Row {.tabset .tabset-fade } 
+-----------------------------------------------------------------------
+### 
+
+```{r}
+#honeyproduction_1998 <- (subset(honeyproduction,year = 1998))
+
+renderPlot({
+honeyproduction_data <- (subset(honeyproduction, year == input$year_choice))
+
+plot_usmap(data = honeyproduction_data, values = input$data_choice) +
+  scale_fill_continuous(low = "green", high = "red", name = input$data_choice) +
+  theme(legend.position = "right")
+})
+```
+

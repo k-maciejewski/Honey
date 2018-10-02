@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538496361135.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1D8AFD07",
+    "lastKnownWriteTime" : 1531427091,
+    "last_content_update" : 1531427091,
+    "path" : "~/Desktop/Kaitlin/honey/honey_production.Rmd",
+    "project_path" : "honey_production.Rmd",
+    "properties" : {
+        "cursorPosition" : "24,0",
+        "scrollLine" : "19"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
