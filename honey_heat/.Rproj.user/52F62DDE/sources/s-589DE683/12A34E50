@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1538496361135.000,
+    "created" : 1538496935842.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "1D8AFD07",
+    "id" : "12A34E50",
     "lastKnownWriteTime" : 1531427091,
     "last_content_update" : 1531427091,
     "path" : "~/Desktop/Kaitlin/honey/honey_production.Rmd",
-    "project_path" : "honey_production.Rmd",
+    "project_path" : null,
     "properties" : {
-        "cursorPosition" : "24,0",
-        "scrollLine" : "19"
+        "cursorPosition" : "14,0",
+        "scrollLine" : "0"
     },
-    "relative_order" : 1,
+    "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"

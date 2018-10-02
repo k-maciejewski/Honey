@@ -44,10 +44,6 @@ years = honeyproduction %>% arrange(year) %>% distinct(year) %>% pull()
 selectInput("year_choice", label = h3("Choose Year"),
             choices = years, selected = "1998")
 
-This data set is from kaggle: https://www.kaggle.com/jessicali9530/honey-production/data
-
- It shows  honey production numbers and prices by state from 1998-2012
-
 ```
 
 Row {.tabset .tabset-fade } 
