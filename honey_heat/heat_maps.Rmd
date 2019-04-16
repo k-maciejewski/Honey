@@ -3,8 +3,8 @@ title: "Honey Heat Maps"
 output: 
   flexdashboard::flex_dashboard:
     navbar:
-      - { title: "return to site", href: "https://k-maciejewski.github.io/", align: right }
-    source_code: "https://github.com/k-maciejewski/"
+      - { title: "return to site", href: "https://k-maciejewski.github.io/projects.html", align: right }
+    source_code: "https://github.com/k-maciejewski/honey/tree/master/honey_heat"
 runtime: shiny
 ---
 
@@ -30,7 +30,6 @@ Column {.sidebar}
 
 hr()
 
-## sentiments
 data = honeyproduction %>% select(-c(state,year)) %>% colnames()
 
 selectInput("data_choice", label = h3("Select Data of Interest"),
@@ -38,7 +37,6 @@ selectInput("data_choice", label = h3("Select Data of Interest"),
 
 hr()
 
-## hours
 years = honeyproduction %>% arrange(year) %>% distinct(year) %>% pull()
 
 selectInput("year_choice", label = h3("Choose Year"),
