@@ -1,0 +1,12 @@
+name: honey_heat_maps
+title: honey_heat_maps
+username:
+account: kmaciejewski
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 867521
+bundleId: 2014175
+url: https://kmaciejewski.shinyapps.io/honey_heat_maps/
+when: 1555377506.54899
+asMultiple: FALSE
+asStatic: FALSE

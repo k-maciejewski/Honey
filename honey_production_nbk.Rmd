@@ -1,0 +1,63 @@
+---
+title: "Playing with honey data"
+author: "Kaitlin Maciejewski"
+output:
+  html_document:
+    df_print: paged
+editor_options:
+  chunk_output_type: inline
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+##### This data set is from kaggle: https://www.kaggle.com/jessicali9530/honey-production/data
+
+##### It shows  honey production numbers and prices by state from 1998-2012
+
+
+# Summary plots
+
+Below are spaghetti plots for each state over time. Number of colonies, total production, and product value over time are examined.
+
+```{r load_data}
+library(readr)
+honeyproduction <- read_csv("honey-production/honeyproduction.csv")
+```
+
+```{r some_plots}
+library(ggplot2)
+
+p1 = ggplot(honeyproduction, aes(year, numcol, color = state)) + 
+  geom_path()
+print(p1)
+
+p2 = ggplot(honeyproduction, aes(year, totalprod, color = state)) + 
+  geom_path()
+print(p2)
+
+p3 = ggplot(honeyproduction, aes(year, prodvalue, color = state)) + 
+  geom_path()
+print(p3)
+```
+
+# Heat maps
+
+```{r}
+library(usmap)
+
+honeyproduction_1998 <- (subset(honeyproduction,year = 1998))
+
+plot_usmap(data = honeyproduction_1998, values = "prodvalue")
+
+```
+
+
+# Regression
+
+```{r}
+
+```
+

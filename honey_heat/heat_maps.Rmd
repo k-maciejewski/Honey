@@ -47,7 +47,6 @@ selectInput("year_choice", label = h3("Choose Year"),
 ```
 
 Row {.tabset .tabset-fade } 
-
 -----------------------------------------------------------------------
 
 ```{r}
